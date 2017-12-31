@@ -1672,11 +1672,12 @@
 		color: #585858;
 		border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
 	}
-
+		/*
 		a:hover {
 			border-bottom-color: transparent;
 			color: #f2849e !important;
 		}
+		*/
 
 	strong, b {
 		font-weight: 900;

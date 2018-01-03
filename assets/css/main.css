@@ -2763,6 +2763,15 @@
 				-ms-transform: scale(1.1);
 				transform: scale(1.1);
 			}
+/*TODO create background
+			body {
+				background-color: #2e3141;
+				background-image: linear-gradient(to top left, rgba(46, 49, 65, 0.1), rgba(46, 49, 65, 0.9)), url("../../images/WALL-E-5.jpg");
+				background-size: auto, cover;
+				background-attachment: fixed, fixed;
+				background-position: center, top;
+			}
+			*/
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
 					background-color: #333333;

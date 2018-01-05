@@ -18,6 +18,11 @@
 		vertical-align: baseline;
 	}
 
+	video {
+  width: 100%    !important;
+  height: auto   !important;
+}
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}

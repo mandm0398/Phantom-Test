@@ -20,15 +20,20 @@
 
 	#leftP{
 	float:left;
-	width:50%
+	width:47%
 	}
 
 	#rightP{
 	float:right;
-	width:50%
+	width:47%
 	}
+/*320, 480, 1680*/
 
-	@media screen and (max-width: 360px) {
+	@media (max-width : 640px) {
+		#leftP{
+		width:100%
+		}
+
 		#rightP{
 		width:100%
 		}

@@ -18,19 +18,38 @@
 		vertical-align: baseline;
 	}
 
+	#boxTestRight
+	{
+		box-sizing: content-box;
+    width: 50%;
+    height: 100px;
+    padding: 30px;
+    border: 10px solid black;
+	}
+
+	#boxTestLeft
+	{
+		box-sizing: content-box;
+    width: 50%;
+    height: 100px;
+    padding: 30px;
+    border: 10px solid black;
+	}
+
 	div.leftP p
 	{
-		width: 75%;
+		width: 80%;
 		margin-left: auto;
     margin-right: auto;
+		text-align: center;
 	}
 
 	div.rightP p
 	{
-		width:75%;
+		width: 80%;
 		margin-left: auto;
     margin-right: auto;
-		/*TODO decide on text-alignment*/
+		text-align: center;
 	}
 
 	.leftP{
@@ -45,11 +64,11 @@
 /*320, 480, 1680*/
 /*Switch to view better on phones*/
 	@media (max-width : 640px) {
-		#leftP{
+		.leftP{
 		width:100%;
 		}
 
-		#rightP{
+		.rightP{
 		width:100%;
 		}
 	}

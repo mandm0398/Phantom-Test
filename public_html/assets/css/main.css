@@ -36,12 +36,19 @@
     border: 10px solid black;
 	}
 
+	.verticalcenter
+	{
+    display: table-cell;
+    height: 400px;
+    vertical-align: middle;
+	}
+
 	div.leftP p
 	{
 		width: 80%;
 		margin-left: auto;
     margin-right: auto;
-		text-align: center;
+		text-align: left;
 	}
 
 	div.rightP p
@@ -49,15 +56,17 @@
 		width: 80%;
 		margin-left: auto;
     margin-right: auto;
-		text-align: center;
+		text-align: left;
 	}
 
 	.leftP{
 	float:left;
 	width:50%;
+	display:flex;
 	}
 
 	.rightP{
+	flex:1;
 	float:right;
 	width: 50%;
 	}
@@ -1748,7 +1757,7 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
 
 	h1 {
@@ -2835,7 +2844,7 @@
 			*/
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
-					background-color: #333333;
+					background-color: #733255;
 					opacity: 0.;
 				}
 

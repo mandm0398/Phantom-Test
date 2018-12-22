@@ -51,72 +51,85 @@
 						<div class="inner">
 							<h1>Stress Analysis: Crane Project</h1>
 							<span class="image main"><img src="images/Crane/MainCrane.jpg" alt="" width=100% /></span>
-							<h2> Objective </h2>
-							<p>As part of my Stress Analysis class my group and I were tasked with designing and building a mechanism powered by a servomotor which could lift a cylindrical weight. Our mechanism was fixed in a given starting position and had to pass through an obstacle as it moved towards the weight which placed constraints on its shape and size.  </p>
+							<h2>Objective</h2>
+							<p>As part of my Stress Analysis class, my group and I were tasked with designing and building a mechanism powered by a servomotor which could lift a cylindrical weight. Our mechanism was fixed in a given starting position and had to pass through an obstacle as it moved towards the weight which placed constraints on its shape and size.</p>
+							<p>Additonally, we were required to keep our crane design under 20 ounces and left the weight a minimum of 2 inches. Our design competed in two categories: lifting the weight the highest or having the lightest crane to achieve the minimum lift of 2 inches.<br/><br/></p>
+							<h2>Teammates</h2>
+							<p><li><a href="https://koneill.me">Kevin O'Neill</a></li>
+								<li><a href="http://saho.studio">Samantha Ho</a></li>
+								<br/>
+							</p>
+							<h2>Design</h2>
 							<div class="leftP" style="float:left">
-								<span class="image main">
-									<img src="images/Wall-E/WheelScale.jpg" alt="" width=100% />
-									<p>I designed this robot from the ground up using only REV Robotics parts and a Wall-E toy to base my measurements off of. As I was using a set build system to create this robot, I began by using the 3 sizes of wheels to determine my scale factors, resulting in two possible scale configurations. I then selected the smaller option to challenge myself because I viewed it as possible through careful planning. This resulted in a small very compact robot with very little tolerance in which all the internal space was utilized.</p>
-								</span>
+							<p>At our first design review we assumed that the arm itself was massless.
+								This is neither practical nor possible; however, we chose to assume this because the center of mass of the arm was so close to the axis of rotation
+								-- thus the moment caused by the arm itself was negligible compared to the torque of the servo, the weight of the counterweight, and the force due to the weight.
+								<br/><br/>Additionally, we assumed that the arm would lift a max of 60 degrees.
+								Although the servo was capable of rotating further, the change in x position of the counterweight as the arm increased in angle would cause the arm to no longer be able to lift the weight.
+								As a result, a 60% lift angle would be a safe assumption for the actual max lift angle.
+								<br/><br/>Lastly, we assumed that the max torque by the servo was 57 oz-in as stated by the manufacturer.
+								After some prototyping, we discovered that we weren't getting anywhere near that torque despite that was what the manufacturer rated the servo for.
+								We suspect that this is due to the fact that these servos were reused for several years.
+								<br/><br/></p>
 							</div>
 							<div class="rightP">
-								<span class="image main">
-									<img src="images/Wall-E/Wall-E render.jpg" alt="" width=57% />
-									<p>Due to having such tight tolerances, I completed the entire CAD model prior to assembly or prototyping any individual subsystem in order to ensure all the different subassemblies would fit together  before building the actual robot. At completion Wall-E was able to drive around, fully articulate its head and neck, move its arms around, and open and close its flap.</p>
-								</span>
+								<div class="verticalcenter">
+									<img src="images/Crane/CraneDesign.jpg" alt="" width=100%>
+								</div>
 							</div>
-							<img src="images/Wall-E/Wall-E Robot3.png" alt="" width=100% style="padding-top:25px;"/>
-					</div>
+							<span class="image main">
+								<img src="images/Crane/CraneRender.png" alt="" width=80%/>
+							</span>
+							<h2>Manufacturing</h2>
+							<p>After coming up with our design and running simulations, we took our materials into the shop and began working.
+								The main body of our crane was constructed out of aluminum cylinders.
+								We used rods rather than rectangular extrusion to resist torsion while still preventing buckling and bending.
+								Additionally, we minimized weight and material use by hollowing out our 1 inch aluminum stock on the lathe.
 
-					<!--TO DELETE-->
-					<!--
-					<div id="leftP" style="float:left">
-					<p>I designed this robot from the ground up using only REV Robotics parts and a Wall-E toy to base my measurements off of. From there, I completed entire CAD model prior to assembly in order to ensure all the tight tolerances would work before building the actual robot. At completion Wall-E was able to drive around, fully articulate its head and neck, move its arms around, and open and close its flap. In total the Wall-E robot took 3 days to design and 2 days to build.
-					</p>
+							</p>
+							<span class="image main">
+								<img src="images/Crane/Hollowing.gif" alt="" width=60% style="padding-top:25px;"/>
+							</span>
+							<div class="leftP">
+									<img style="float: left;" src="images/Crane/Polishing.gif" alt="" width=99%>
+							</div>
+							<div class="rightP">
+									<img style="float: right;"src="images/Crane/Bracket.gif" alt="" width=99%>
+							</div>
+							<font size=".00001"><p>&nbsp;</p></font>
+							<h2><br/>Design Review 1</h2>
+							<p>We were essentially achieving 2 inches of height up until the night before the first design review.
+								The main source of error that we encountered was the fact that the servo we were using was not consistent.
+								Not only did we see different capabilities between different controllers, but also when we began the design review, we realized that the servo was performing at a reduced level compared to the night before.
+								Our suspicions were confirmed when we switched servos and our crane performed better.
+								There was also a slight source of error due to the assumption that the arm was massless as the arm in practice was not.
+								<br/><br/>
+								The actual output of our crane was much worse than the calculations that we did to find our theoretical servo torque as well as our theoretical lift height.
+								Initially we calculated that using a counterweight that had its center of mass six inches from the axis of rotation would provide plenty of torque to allow for the servo to easily lift the weight.
+								Unfortunately, when we placed our design on the field, we quickly found that the arm could barely lift the weight and that the crane was nowhere near the 2 inches that we needed to achieve.
+							</p>
+							<span class="image main">
+								<img src="images/Crane/DesignReview1.gif" alt="" width=60% style="padding-top:25px;"/>
+							</span>
+							<h2>Final Design</h2>
+							<p>After the first design review, we added a 45 degree bend in the lever arm and improved our counterweight so it would no longer hit our crane arm.
+								Additionally, we milled a smaller base that allowed for more adjustability when it came to iterating for our final version.
+								<br/><br/>
+								Our final crane design was extremely adjustable in terms of rotation as well as adjusting our servo mount to get the arm to interact with the weight at the correct angle.
+								Hollowed rods allowed for us to minimize weight without sacrificing structural integrity, especially in respect to bending.
+								The tension strips that were used were instrumental in preventing further bending as it prevented bending for the first 60% of the crane arm length.
+								The angled arm allowed for the weight to be lifted at a larger distance from the servo. It also allowed the counterweight to not overpower the servo at the beginning, but apply enough counter torque for the arm to lift the weight completely.
+								<br/><br/>
+								In the end, our design lifted the weight a height of 4.875 inches, which was the second highest in the class.
+							</p>
+							<span class="image main">
+								<img src="images/Crane/FinalDesign.gif" alt="" width=60% style="padding-top:25px;"/>
+							</span>
 					</div>
-					<div id="rightP" style="float">
-						<span class="image">
-							<img src="images/Wall-E/WheelScale.png" alt="" width=100% align="center" />
-						</span>
-					</div>
-				-->
-
 
 					<!-- Footer -->
 						<footer id="footer">
 							<div class="inner">
-								<!--
-								<section>
-									<h2>Get in touch</h2>
-									<form method="post" action="#">
-										<div class="field half first">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send" class="special" /></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<h2>Follow</h2>
-									<ul class="icons">
-										<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-										<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
-										<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-									</ul>
-								</section>
-								-->
 								<ul class="copyright">
 									<li>&copy; Michael Mong. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 								</ul>

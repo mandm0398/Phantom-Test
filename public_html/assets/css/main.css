@@ -62,11 +62,9 @@
 	.leftP{
 	float:left;
 	width:50%;
-	display:flex;
 	}
 
 	.rightP{
-	flex:1;
 	float:right;
 	width: 50%;
 	}
@@ -2844,8 +2842,8 @@
 			*/
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
-					background-color: #733255;
-					opacity: 0.;
+					background-color: #333333;
+					opacity: 0.6;
 				}
 
 				body:not(.is-touch) .tiles article:hover > .image:after {

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Bracket</title>
+		<title>Gripper</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -45,56 +45,130 @@
 						</div>
 					</header>
 
-
-
-				<!-- Menu -->
-				<!--TODO delete later
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-					</nav>
-				-->
-
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Bracket</h1>
-							<span class="image main"><img src="images/Bracket/Bracket.jpg" alt="" width=50% /></span>
-							<p>	During the summers of 2016 and 2017, I worked at <a href=" http://www.revrobotics.com/"> REV Robotics</a>, an educational robotics company which provides parts and control systems for high school robotics teams participating in the FIRST Tech Challenge. While there, I worked on various projects ranging from improving a robotics kit meant to be used to teach robotics in the classroom to developing example robots using only REV parts. One of these example robots was a working Wall-E robot which was developed for promotional purposes. This robot was independently designed, assembled, and programmed over the course of a week.</p>
-							<div class="leftP" style="float:left">
-								<span class="image main">
-									<img src="images/Wall-E/WheelScale.jpg" alt="" width=100% />
-									<p>I designed this robot from the ground up using only REV Robotics parts and a Wall-E toy to base my measurements off of. As I was using a set build system to create this robot, I began by using the 3 sizes of wheels to determine my scale factors, resulting in two possible scale configurations. I then selected the smaller option to challenge myself because I viewed it as possible through careful planning. This resulted in a small very compact robot with very little tolerance in which all the internal space was utilized.</p>
+							<h1>Design 1 Gripper Project</h1>
+							<span class="image main"><img src="images/Gripper/Talon.JPG" alt="" width=90% /></span>
+							<h2>Objective</h2>
+							<div class="largeLeftP" style="float:left">
+								<p>The objective of this project was to design and build an actuated gripper powered by a single motor which can grab a water bottle top with a weighted metal bottom. Our gripping mechanism must attach to the bottom of the provided motor assembly and derive power from the output shaft depicted on the right. Once the object is firmly grasped by the gripper, the whole assembly is released from a 90 degree angle and allowed to swing for a period of time. Afterwards, the object’s position relative to its starting position is measured. If the object has displaced more than 0.1 inches in any direction the gripper would fail the test. Grippers that passed the testing were ranked based on lightest mass.
+									<br/><br/>
+									In addition to the basic criteria for passing the test, there were 3 major constraints placed on our design:
+									<ol class="tab">
+										<li>When the gripper is closed around the object it must fit within a 7 inch sided cube starting from the base of the motor assembly. Attachments from the motor output shaft to the gripper are allowed to be outside the box.</li>
+										<li>The gripper must close when the motor is continuously run in one direction and remain open when the motor is continuously run in the opposite direction.</li>
+										<li>When attached to the motor assembly, the gripper must be able to swing into gripping position without touching the object.</li>
+									</ol>
+								</p>
+							</div>
+							<div class="smallRightP" style="float:right">
+									<img src="images/Gripper/MotorHousing.png" alt="" width=100%>
+							</div>
+							<font size=".00001"><p>&nbsp;</p></font>
+							<span class="image main">
+								<img src="images/CheekySpacer.PNG" alt="" width=100% />
+							</span>
+							<h2>Teammates</h2>
+							<ul class="tab">
+								<li>
+									<a href="https://koneill.me"> Kevin O'Neill</a>
+								</li>
+								<li>Alexander Baikovitz</li>
+								<li>Andrew Rosenfeld</li>
+								<li>Jack Sather</li>
+							</ul>
+							<h2>The Design Process</h2>
+							<div class="box alt">
+								<div class="row uniform">
+									<div class="6u">
+										<span class="image fit">
+											<img src="images/Gripper/Analysis.PNG" alt="">
+										</span>
+									</div>
+									<div class="6u">
+										<span class="image fit">
+											<img src="images/Gripper/InitlalBrainstrom.PNG" alt="">
+										</span>
+									</div>
+								</div>
+							</div>
+							<p>When we began our initial brainstorming we determined that actuating our gripper using string rather than gears would be the optimal solution. We believed that gears would involve more mass than string as, in addition to gears being inherently heavier than string, gears would involve the addition of an extra axel and bearing set up which would add unnecessary mass. The extra mass of gears was deemed disproportionally beneficial as we could achieve the geared up torque of the 	gears with the string by pulling on the gripper arm further away from the pivot point.
+							<br/><br/>
+							Because sting could only pull the gripper closed we would need to spring load the arms open. In order to minimize both complexity and mass we then decided to use a two arm gripper with only one actuated arm. We planned that the arms would be aligned with the dynamic motion to allow them to better resist bending moments.
+							<br/><br/>
+							We knew that our end goal was to use foam sandwiched with carbon fiber as our final gripper material; however, we used Delrin for our first design review. The main purpose of this was to ensure that we would have one of our tests pass so that we could risk more on the second test. Secondly, we wanted to determine any flaws in our initial design before we moved onto the carbon fiber sandwich as it was more expensive than the Delrin. Therefore, we could essentially use the Delrin as a prototyping material before moving onto the carbon fiber. Finally, we waited to use carbon fiber until the last test as we wanted to ensure that other groups would not be able to easily replicate our final design which we hoped to optimize to be the lightest.
+							</p>
+							<span class="image main">
+								<img src="images/CheekySpacer.PNG" alt="" width=100% />
+							</span>
+							<h2>Manufacturing</h2>
+							<div class="box alt">
+								<div class="row uniform">
+									<div class="6u">
+										<span class="image fit">
+											<img src="images/Gripper/setup.jpg" alt="">
+										</span>
+									</div>
+									<div class="6u">
+										<span class="image fit">
+											<img src="images/Gripper/cncing.gif" alt="">
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="box alt">
+								<div class="row uniform">
+							<div class="6u">
+								<span class="image fit">
+									<img src="images/Gripper/carboncncing-4.png" alt="">
 								</span>
 							</div>
-							<div class="rightP">
-								<span class="image main">
-									<img src="images/Wall-E/Wall-E render.jpg" alt="" width=57% />
-									<p>Due to having such tight tolerances, I completed the entire CAD model prior to assembly or prototyping any individual subsystem in order to ensure all the different subassemblies would fit together  before building the actual robot. At completion Wall-E was able to drive around, fully articulate its head and neck, move its arms around, and open and close its flap.</p>
+							<div class="6u">
+								<span class="image fit">
+									<img src="images/Gripper/carbonpost.jpg" alt="">
 								</span>
 							</div>
-							<img src="images/Wall-E/Wall-E Robot3.png" alt="" width=100% style="padding-top:25px;"/>
+							</div>
+							</div>
+							<p>This project involved a variety of manufacturing techniques from laser-cutters to CNC mills. For the Delrin version of the arms we were able to use a standard CNC mill; however, as machining carbon fiber poses a health hazard, we had to find specialized machines on campus that had safeguards to mitigate the risks. Machining the arms in this way allowed us to create more complex geometries that were better able to handle the loads expected during testing while removing all unnecessary mass. When the carbon fiber sandwich arms were machined we noticed that they were very weak in off axis loading so we added two part epoxy along the edges of the parts which drastically increased their rigidity.</p>
+							<span class="image main">
+								<img src="images/CheekySpacer.PNG" alt="" width=100% />
+							</span>
+							<h2>Design Review 1</h2>
+							<div class="box alt">
+								<div class="row uniform">
+									<div class="6u">
+										<span class="image fit">
+											<img src="images/Gripper/Version1Open.jpg" alt="">
+										</span>
+									</div>
+									<div class="6u">
+										<span class="image fit">
+											<img src="images/Gripper/Round1Testing.gif" alt="">
+										</span>
+									</div>
+								</div>
+							</div>
+							<p>Our gripper for the first design review was highly unoptimized and featured a heavy resin 3-D printed spool and Delrin arms. This spool was key to the operation of our gripper as it contained two channels for string so that we could use one to actuate the gripper and the other as a hard stop to prevent rewinding when the motor was run in reverse. As the spool increased the radius of the output shaft, we needed to add loops in the string between the two arms to act as pully to allow us to maximize our grip strength.
+							<br/><br/>
+							Our first design review gripper weighed 134 grams which was about 60 grams heavier than the lightest gripper from this round of tests.
+							<br/><br/>
+							After reflecting on our performance we determined that the fundamental design was sound; however, we would need to switch to carbon fiber and make some minor changes to ensure we had the lightest gripper.
+							</p>
+							<span class="image main">
+								<img src="images/CheekySpacer.PNG" alt="" width=100% />
+							</span>
+							<h2>Final Design Review</h2>
+							<img src="images/Gripper/ClosedTalon.JPG" alt="" width=100% style="padding-top:25px;"/>
+							<p>For our final design we had replaced the 87 grams of Delrin with about 12 grams of carbon fiber sandwiching foam. Additionally, we came up with an elegant solution to the 16 gram 3D printed spool in the form of a simple lasercut Delrin piece weighing 0.69 grams which acted as a one way rachet so that an additional hard stop was no longer needed. Additionally, we reduced the amount of hardware where possible and replaced all metal hardware with nylon replacements to further reduce mass.
+							<br/><br/>
+							When we switched to the carbon fiber we realized that the previous, more direct string path, placed unnecessary bending load in the direction the carbon fiber and foam sandwich was weak to so we manufactured a spacer that would allow us to pass though the base and place the arm in compression rather than bending.
+							<br/><br/>
+							These changes allowed us to create a gripper which only weighed 23.4 grams. This was a significant achievement as the class average was 150 grams and the next lightest gripper was 40 grams.
+							</p>
+							<img src="images/Gripper/render.png" alt="" width=100% style="padding-top:25px;"/>
 					</div>
-
-					<!--TO DELETE-->
-					<!--
-					<div id="leftP" style="float:left">
-					<p>I designed this robot from the ground up using only REV Robotics parts and a Wall-E toy to base my measurements off of. From there, I completed entire CAD model prior to assembly in order to ensure all the tight tolerances would work before building the actual robot. At completion Wall-E was able to drive around, fully articulate its head and neck, move its arms around, and open and close its flap. In total the Wall-E robot took 3 days to design and 2 days to build.
-					</p>
-					</div>
-					<div id="rightP" style="float">
-						<span class="image">
-							<img src="images/Wall-E/WheelScale.png" alt="" width=100% align="center" />
-						</span>
-					</div>
-				-->
-
 
 					<!-- Footer -->
 						<footer id="footer">
@@ -137,7 +211,6 @@
 							</div>
 						</footer>
 
-			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

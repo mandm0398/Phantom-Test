@@ -59,6 +59,8 @@
 		text-align: left;
 	}
 
+	.tab { margin-left: 40px; }
+
 	.leftP{
 	float:left;
 	width:50%;
@@ -66,7 +68,18 @@
 
 	.rightP{
 	float:right;
-	width: 50%;
+	width:50%;
+	}
+
+	.largeLeftP{
+		float:left;
+		width:65%;
+	}
+
+	.smallRightP{
+		float:right;
+		width:35%;
+	}
 	}
 /*320, 480, 1680*/
 /*Switch to view better on phones*/
@@ -77,6 +90,14 @@
 
 		.rightP{
 		width:100%;
+		}
+		.largeLeftP{
+			width:100%;
+		}
+
+		.smallRightP{
+			float:right;
+			width:100%;
 		}
 	}
 
